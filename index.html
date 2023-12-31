@@ -217,21 +217,21 @@
     <script>
         var container = document.getElementById('map');
         var options = {
-            center: new kakao.maps.LatLng(37.520963, 126.802299),
+            center: new kakao.maps.LatLng(37.691951, 126.600084),
             level: 3
         };
 
         var map = new kakao.maps.Map(container, options);
 
-        var markerPosition  = new kakao.maps.LatLng(37.520963, 126.802299);
+        var markerPosition  = new kakao.maps.LatLng(37.691951, 126.600084);
         var marker = new kakao.maps.Marker({
             position: markerPosition
         });
         marker.setMap(map);
 
         // set infowindow
-        var iwContent = '<div style="padding:5px;">더사랑통합재가센터</div>',
-            iwPosition = new kakao.maps.LatLng(37.520963, 126.802299);
+        var iwContent = '<div style="padding:5px;">가정방문요양콜센터</div>',
+            iwPosition = new kakao.maps.LatLng(37.691951, 126.600084);
 
         var infowindow = new kakao.maps.InfoWindow({
             position : iwPosition,
