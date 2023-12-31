@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="naver-site-verification" content="b91254dfcdc3714ad3e47db7d05c8dd1ee193925" />
+    <title>가정방문요양콜센터 - 편안하게 모시겠습니다.</title>
+    <!-- <meta name="description" content="더사랑통합재가센터에서는 고객님의 편안함과 건강을 최우선으로 생각합니다. 서비스 소개, 장기요양등급대리신청문의에 대해 알아보세요."> -->
+
+    <!-- Open Graph tags -->
+    <!-- <meta property="og:type" content="website" /> -->
+    <!-- <meta property="og:title" content="더사랑통합재가센터 - 홈" /> -->
+    <!-- <meta property="og:description" content="더사랑통합재가센터에서 제공하는 최상의 서비스와 편안한 케어를 경험하세요." /> -->
+    <!-- <meta property="og:image" content="http://www.thesarangcare.com/static/img/더사랑메인.png" /> -->
+    <!-- <meta property="og:url" content="http://www.thesarangcare.com" /> -->
+
+    <!-- Google Fonts: Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    
+        #map {
+            width: 100%;
+            height: 350px;
+        }
+        .blurry-background {
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .blurry-background::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('static/img/메인화면.jpg'); /* 경로 수정 필요 */
+            filter: blur(5px);
+            z-index: -1;
+        }
+    
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .contact-badge {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: #000080; /* 진한 파랑색 배경 */
+            color: white;
+            padding: 10px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            z-index: 1000;
+        }
+
+        .contact-badge img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Logo -->
+        <div class = "container">
+        <a class="navbar-brand" href="index.html" style="font-weight: bold; color: green; font-size: 30px; font-family: 'Noto Sans KR', sans-serif; border: 2px solid green; padding: 10px; border-radius: 50%; display: inline-block;">
+            가정방문요양콜센터
+        </a>
+        <!-- Toggle button for mobile view -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Navbar items -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="homecare.html">방문요양</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="homebathing.html">방문목욕</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="registration.html">장기요양등급대리신청문의</a>
+                    </li> -->
+                    <!-- Add other menu items as necessary -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="container mt-6 blurry-background">
+        <img src="static/img/메인화면.jpg" class="img-fluid mx-auto d-block" alt="Image 1" style="object-fit: cover; width: 100%; max-height: 800px; opacity: 0.5;">
+        <div class="centered-text" style = "font-size: 30px; color: #000 !important; position: absolute; top: 180px; left: 250px; text-align: left;">
+            안녕하세요.<br>
+            가정방문요양콜센터입니다.<br>
+            편안하게 모시겠습니다.
+        </div>
+    </section>
+    <!-- Map -->
+    <section class="container mt-4">
+        <h1>찾아 오시는 길</h1>
+
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div id="map"></div>
+            </div>
+            <div class = "col-md-6">
+                <h1>가정방문요양콜센터</h1>
+                <hr>
+                <address>
+                    주소: 김포시 통진읍 서암로 84번길 19-11 <br>
+                    <br><hr>
+                    근무시간: 09:00 ~ 18:00 <br>
+                    (매주 일요일 휴무) <br><hr>
+                    전화번호: 031-998-5788<br>
+                    전화번호: 031-989-9551
+                </address>
+        </div>
+    </section>
+    <!-- <section class="container mt-4 text-center">
+        <div class="row justify-content-center">
+            <div class="col-auto mb-2">
+                <a href="intro_service.html" class="btn btn-primary" style="font-size: 20px; background: green; border-color: green; color: white;">서비스 소개 보러가기</a>
+            </div>
+            <div class="col-auto mb-2">
+                <a href="tel:032-681-8621" class="btn btn-primary" style="font-size: 20px; background: green; border-color: green; color: white;">전화상담하기</a>
+            </div>
+        </div>
+    </section> -->
+    
+    <div class="contact-badge">
+        <!-- <img src="static/img/phone-icon.png" alt="전화 아이콘" /> 전화 아이콘 이미지 경로를 확인해주세요 -->
+        <a href="tel:031-998-5788" style="font-size: 20px; color: white;">전화상담하기</a>
+    </div>
+        
+    <br>
+        
+    <footer class="mt-5 p-4 text-white bg-dark">
+        <div class="container">
+            <p>가정방문요양콜센터</p><br>
+            <p>연락처: 031-998-5788 | 031-989-9551</p><br>
+            <p>찾아주셔서 감사합니다. 친절함과 전문성으로 보답하겠습니다.</p>
+        </div>
+    </footer>
+    
+    
+    <!-- Kakao maps API -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8842d176c845931a407c3ad4309249af"></script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(37.520963, 126.802299),
+            level: 3
+        };
+
+        var map = new kakao.maps.Map(container, options);
+
+        var markerPosition  = new kakao.maps.LatLng(37.520963, 126.802299);
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+        marker.setMap(map);
+
+        // set infowindow
+        var iwContent = '<div style="padding:5px;">더사랑통합재가센터</div>',
+            iwPosition = new kakao.maps.LatLng(37.520963, 126.802299);
+
+        var infowindow = new kakao.maps.InfoWindow({
+            position : iwPosition,
+            content : iwContent
+        });
+        infowindow.open(map, marker);
+    </script>
+</body>
+</html>

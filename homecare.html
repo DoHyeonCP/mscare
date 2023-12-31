@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방문요양 소개</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html" style="font-weight: bold; color: green; font-size: 30px; font-family: 'Noto Sans KR', sans-serif; border: 2px solid green; padding: 10px; border-radius: 50%; display: inline-block;">
+            가정방문요양콜센터
+        </a>
+        <!-- Toggle button for mobile view -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Navbar items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">홈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="homecare.html">방문요양</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="homebathing.html">방문목욕</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="registration.html">장기요양등급대리신청문의</a>
+                </li> -->
+                <!-- Add other menu items as necessary -->
+            </ul>
+        </div>
+    </nav>
+    <div class="content" style = "font-size: 20px; font-weight: bold;">
+        <p>
+            <h1>1. 방문요양이란?</h1><br>
+            집에서 요양이 필요한 어르신을 위해 전문 요양사가 집으로 찾아와 일상 생활 지원, 기본적인 건강 관리, 간단한 재활 운동 등을 도와주는 서비스입니다.
+            <br><hr>
+            <h1>2. 방문요양 왜 필요한가요?</h1><br>
+            병원이나 요양원에 가지 않아도 집에서 전문 요양사의 도움을 받아 건강 관리와 일상 생활을 유지하실 수 있습니다.</p>
+    </div>
+    <hr> <!-- 구분선 -->
+
+    <div class="content" style = "font-size: 20px; font-weight: bold;">
+        <h1> 3. 방문요양절차 </h1>
+        <p>
+            <br>
+            01. 신청<br>
+            - 65세 이상 노인분<br>
+            - 65세 미만 이지만 노인질병을 가진 분<br>
+            - 혼자서는 일상생활이 불편하신 분(본인 또는 대리인이 방문, 우편, 팩스, 인터넷으로 장기노인요양센터 또는 국민 건강보험공단에 신청할 수 있습니다.)<br>
+            <br>
+            02. 판정<br>
+            - 장기요양등급판정위원회에서 신청일로부터 30일 이내에 판정합니다.<br>
+            - 6개월 이상 동안 혼자서 일상생활이 어렵다고 인정되는 경우 심신상태 및 장기요양이 필요한 정도에 따라 등급을 판정<br>
+            <br>
+            03. 결과통지<br>
+            - 신청일로부터 30일 이내에 판정결과에 따라 장기요양인정서, 표준이용계획서를 송부합니다.<br>
+            - 유효기간 종료 90일 전부터 30일 전까지 갱신신청이 가능합니다.<br>
+            - 유효기간 경과 후 매년 연속 3회 이상 같은 등급으로 판정되는 경우 3회 이후부터 유효기간은 2년입니다.<br>
+        </p>
+    </div>
+    <!-- 버튼 -->
+    <!-- <div class="text-center">
+        <a href="{% url 'registration' %}" class="btn btn-primary" style = "font-size: 30px; background: green;">장기요양등급대리신청하러가기</a>
+    </div> -->
+
+    <footer class="mt-5 p-4 text-white bg-dark">
+        <div class="container">
+            <p>가정방문요양콜센터</p><br>
+            <p>연락처: 031-998-5788 | 031-989-9551</p><br>
+            <p>찾아주셔서 감사합니다. 친절함과 전문성으로 보답하겠습니다.</p>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>
