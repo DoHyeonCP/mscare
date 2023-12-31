@@ -24,29 +24,56 @@
         body {
             font-family: 'Roboto', sans-serif;
         }
+
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #4e4e4e;
+        }
+
     
         #map {
             width: 100%;
             height: 350px;
         }
         .blurry-background {
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
         }
-    
-        .blurry-background::before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
+        .blurry-background img {
             width: 100%;
-            height: 100%;
-            background-image: url('static/img/메인화면.jpg'); /* 경로 수정 필요 */
-            filter: blur(5px);
-            z-index: -1;
+            height: auto;
+            opacity: 0.5;
+            object-fit: cover;
+            max-height: 800px;
         }
     
+
+    
+        .section-title {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 8px 16px; /* 패딩 추가 */
+            margin: 20px 0; /* 위아래 여백 추가 */
+            border-radius: 8px; /* 배경색의 모서리를 둥글게 함 */
+        }
+        .service-container {
+            display: flex;
+            justify-content: center; /* 가로 방향 중앙 정렬 */
+            align-items: center; /* 세로 방향 중앙 정렬 */
+            margin-top: 50px; /* 위 여백 조정 */
+            margin-bottom: 100px; /* 아래 여백 조정 */
+        }
+        .map-container {
+            margin: 20px 0;
+            padding: 20px 0;
+        }
+
         .centered-text {
             position: absolute;
             top: 50%;
@@ -77,10 +104,38 @@
             height: 24px;
             margin-right: 8px;
         }
+
+
+
+         /* Footer 스타일링 */
+        footer{
+            background-color: #343a40;
+            color: #fff;
+            padding-top: 20px;
+        }
+
+        footer .row div {
+            margin-bottom: 20px;
+        }
+
+        footer address, footer p {
+            margin: 0; /* 기본 마진 제거 */
+        }
+
+        /* 모바일 뷰 대응 */
+        @media (max-width: 991px) {
+            .navbar {
+                padding-top: 0; /* 상단 여백 제거 */
+            }
+
+            .centered-text {
+                font-size: 20px; /* 모바일에서 폰트 사이즈 조정 */
+            }
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <!-- Logo -->
         <div class = "container">
         <a class="navbar-brand" href="index.html" style="font-weight: bold; color: green; font-size: 30px; font-family: 'Noto Sans KR', sans-serif; border: 2px solid green; padding: 10px; border-radius: 50%; display: inline-block;">
@@ -91,27 +146,23 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     
-        <!-- Navbar items -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">홈</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="homecare.html">방문요양</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="homebathing.html">방문목욕</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="registration.html">장기요양등급대리신청문의</a>
-                    </li> -->
-                    <!-- Add other menu items as necessary -->
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">홈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="homecare.html">방문요양 소개</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="homebathing.html">방문목욕 소개</a>
+                </li>
+                <!-- More nav items -->
+            </ul>
         </div>
+    </div>
     </nav>
-    <section class="container mt-6 blurry-background">
+    <section class="blurry-background">
         <img src="static/img/메인화면.jpg" class="img-fluid mx-auto d-block" alt="Image 1" style="object-fit: cover; width: 100%; max-height: 800px; opacity: 0.5;">
         <div class="centered-text" style = "font-size: 30px; color: #000 !important; position: absolute; top: 180px; left: 250px; text-align: left;">
             안녕하세요.<br>
@@ -120,36 +171,20 @@
         </div>
     </section>
     <!-- Map -->
-    <section class="container mt-4">
-        <h1>찾아 오시는 길</h1>
+    <div class="container">
+        <h2 class = "section-title">주요 서비스</h2>
+        <div class="service-container">
+            <img src="static/img/메인서비스.png" alt="메인서비스">
+        </div>
 
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <div id="map"></div>
-            </div>
-            <div class = "col-md-6">
-                <h1>가정방문요양콜센터</h1>
-                <hr>
-                <address>
-                    주소: 김포시 통진읍 서암로 84번길 19-11 <br>
-                    <br><hr>
-                    근무시간: 09:00 ~ 18:00 <br>
-                    (매주 일요일 휴무) <br><hr>
-                    전화번호: 031-998-5788<br>
-                    전화번호: 031-989-9551
-                </address>
-        </div>
-    </section>
-    <!-- <section class="container mt-4 text-center">
-        <div class="row justify-content-center">
-            <div class="col-auto mb-2">
-                <a href="intro_service.html" class="btn btn-primary" style="font-size: 20px; background: green; border-color: green; color: white;">서비스 소개 보러가기</a>
-            </div>
-            <div class="col-auto mb-2">
-                <a href="tel:032-681-8621" class="btn btn-primary" style="font-size: 20px; background: green; border-color: green; color: white;">전화상담하기</a>
+        <div class = "container my-4">
+            <h2 class = "section-title">찾아 오시는 길</h2>
+            <div class = "map-container">
+                <div id = "map"></div>
             </div>
         </div>
-    </section> -->
+    </div>
+
     
     <div class="contact-badge">
         <!-- <img src="static/img/phone-icon.png" alt="전화 아이콘" /> 전화 아이콘 이미지 경로를 확인해주세요 -->
@@ -160,9 +195,19 @@
         
     <footer class="mt-5 p-4 text-white bg-dark">
         <div class="container">
-            <p>가정방문요양콜센터</p><br>
-            <p>연락처: 031-998-5788 | 031-989-9551</p><br>
-            <p>찾아주셔서 감사합니다. 친절함과 전문성으로 보답하겠습니다.</p>
+            <div class="row">
+                <div class="col-md-6 text-left">
+                    <p>연락처: 연락처: 031-998-5788 | 031-989-9551</p>
+                    <address>
+                        주소: 김포시 통진읍 서암로 84번길 19-11 
+                    </address>
+                </div>
+                <div class="col-md-6 text-left">
+                    <p>근무시간: 09:00 ~ 18:00</p>
+                    <p>휴무: 매주 일요일</p>
+                    <p>대표: 이명숙</p>
+                </div>
+            </div>
         </div>
     </footer>
     

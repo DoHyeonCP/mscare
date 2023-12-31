@@ -10,11 +10,83 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+    <style>
+        body {
+            padding-top: 56px; /* Fixed navbar offset */
+            font-family: 'Roboto', sans-serif;
+        }
 
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #4e4e4e;
+        }
+
+        .section-title {
+            background-color: #e9ecef;
+            border-radius: 0.25rem;
+            padding: 0.5rem;
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #495057;
+        }
+
+        .contact-badge {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: #000080; /* 진한 파랑색 배경 */
+            color: white;
+            padding: 10px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            z-index: 1000;
+        }
+
+        .contact-badge img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+         /* Footer 스타일링 */
+        footer{
+            background-color: #343a40;
+            color: #fff;
+            padding-top: 20px;
+        }
+
+        footer .row div {
+            margin-bottom: 20px;
+        }
+
+        footer address, footer p {
+            margin: 0; /* 기본 마진 제거 */
+        }
+    
+    /* 모바일 뷰 대응 */
+    @media (max-width: 991px) {
+        .navbar {
+            padding-top: 0; /* 상단 여백 제거 */
+        }
+
+        .centered-text {
+            font-size: 20px; /* 모바일에서 폰트 사이즈 조정 */
+        }
+    }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <!-- Logo -->
+        <div class = "container">
         <a class="navbar-brand" href="index.html" style="font-weight: bold; color: green; font-size: 30px; font-family: 'Noto Sans KR', sans-serif; border: 2px solid green; padding: 10px; border-radius: 50%; display: inline-block;">
             가정방문요양콜센터
         </a>
@@ -23,70 +95,73 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     
-        <!-- Navbar items -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">홈</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="homecare.html">방문요양</a>
+                    <a class="nav-link" href="homecare.html">방문요양 소개</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="homebathing.html">방문목욕</a>
+                    <a class="nav-link" href="homebathing.html">방문목욕 소개</a>
                 </li>
-                <!-- <li>
-                    <a class="nav-link" href="introduce.html">인삿말</a>
-                </li> -->
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="registration.html">장기요양등급대리신청문의</a>
-                </li> -->
-                <!-- Add other menu items as necessary -->
+                <!-- More nav items -->
             </ul>
         </div>
-    </nav>
-    <!-- <div>
-        <img src='static/img/방문목욕_Proto.png' alt="Right Image" class="img-fluid">
-    </div> -->
-
-    <div class="content" style = "font-size: 20px; font-weight: bold;">
-            <h1>1. 방문목욕이란?</h1><br>
-            집에서 편안하게 목욕을 원하시는 어르신을 위해 전문가가 집으로 직접 찾아와 목욕 서비스를 제공하는 것입니다.
-            <br><hr>
-            <h1>2. 방문목욕 왜 필요한가요?</h1><br>
-            집에서 나갈 필요 없이 안전하게 목욕을 즐기실 수 있습니다. 또한 전문가의 도움으로 안전하게 목욕을 마칠 수 있어요.</p>
     </div>
-    <hr> <!-- 구분선 -->
+    </nav>
 
-    <div class="content" style = "font-size: 20px; font-weight: bold;">
-        <h1> 3. 방문목욕 서비스 절차 </h1>
+    <div class="container content" style = "margin-top:100px; font-size: 20px; font-weight: bold;">
+        <h1 class="section-title">방문목욕이란?</h1><br>
+        <p>
+            집에서 편안하게 목욕을 원하시는 어르신을 위해 전문가가 집으로 직접 찾아와 목욕 서비스를 제공하는 것입니다.
+        </p>
+        
+        <br>
+        <h1 class="section-title">방문목욕 왜 필요한가요?</h1><br>
+        <p>집에서 나갈 필요 없이 안전하게 목욕을 즐기실 수 있습니다. 또한 전문가의 도움으로 안전하게 목욕을 마칠 수 있어요.</p>
+    </div>
+
+    <div class="container content" style = "font-size: 20px; font-weight: bold;">
+        <h1 class="section-title">방문목욕 서비스 절차 </h1>
         <p>
             <br>
-            01. 목욕전 컨디션확인<br>
+            <h2>1. 목욕전 컨디션확인</h2>
             목욕시 저체력으로 인해 건강상 문제가 발생할 수 있고 목욕 후 체력이 떨어지는 등의 문제가 발생할 수 있으므로 반드시 목욕전에 대상자의 혈압, 체온, 맥박 등의 건강상태를 확인 후 입욕 여부를 결정합니다.<br><br>
-            02.입욕준비<br>
+            <h2>2. 입욕준비</h2>
             서비스의 내용에 따라 목욕차량을 이용한 목욕, 이동욕조를 설치한 목욕 혹은 가정내의 욕조를 이용한 목욕을 실시하게 됩니다.<br><br>
-            03. 입욕<br>
+            <h2>3. 입욕</h2>
             세면과 머리감기를 우선적으로 실시하며 이후 온몸으로 이동하여 목욕을 실시하며 깨끗한 물로 한번 더 씻습니다.<br><br>
-            04. 닦고 머리말리기<br>
+            <h2>4. 닦고 머리말리기</h2>
             타월, 목욕가운 등을 걸치고 자리를 옮긴 후 몸을 닦고 드라이를 이용하여 머리를 깨끗히 말려줍니다.<br><br>
-            05. 목욕 후 컨디션 확인<br>
+            <h2>5. 목욕 후 컨디션 확인</h2>
             목욕 후 신체의 변화가 없는지에 대해 목욕 전 컨디션 확인 떄와 목욕 후에도 재확인 합니다.
         </p>
     </div>
-    <!-- 버튼 -->
-    <!-- <div class="text-center">
-        <a href="{% url 'registration' %}" class="btn btn-primary" style = "font-size: 30px; background: green;">장기요양등급대리신청하러가기</a>
-    </div> -->
 
+    <div class="contact-badge">
+        <!-- <img src="static/img/phone-icon.png" alt="전화 아이콘" /> 전화 아이콘 이미지 경로를 확인해주세요 -->
+        <a href="tel:031-998-5788" style="font-size: 20px; color: white;">전화상담하기</a>
+    </div>
+    
     <footer class="mt-5 p-4 text-white bg-dark">
         <div class="container">
-            <p>가정방문요양콜센터</p><br>
-            <p>연락처: 031-998-5788 | 031-989-9551</p><br>
-            <p>찾아주셔서 감사합니다. 친절함과 전문성으로 보답하겠습니다.</p>
+            <div class="row">
+                <div class="col-md-6 text-left">
+                    <p>연락처: 연락처: 031-998-5788 | 031-989-9551</p>
+                    <address>
+                        주소: 김포시 통진읍 서암로 84번길 19-11 
+                    </address>
+                </div>
+                <div class="col-md-6 text-left">
+                    <p>근무시간: 09:00 ~ 18:00</p>
+                    <p>휴무: 매주 일요일</p>
+                    <p>대표: 이명숙</p>
+                </div>
+            </div>
         </div>
     </footer>
-    
 </div>
 </body>
 </html>
