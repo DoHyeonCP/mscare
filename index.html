@@ -8,151 +8,50 @@
     <!-- <meta name="description" content="더사랑통합재가센터에서는 고객님의 편안함과 건강을 최우선으로 생각합니다. 서비스 소개, 장기요양등급대리신청문의에 대해 알아보세요."> --> -->
 
     <!-- Open Graph tags -->
-    <!-- <meta property="og:type" content="website" /> -->
-    <!-- <meta property="og:title" content="더사랑통합재가센터 - 홈" /> -->
-    <!-- <meta property="og:description" content="더사랑통합재가센터에서 제공하는 최상의 서비스와 편안한 케어를 경험하세요." /> -->
-    <!-- <meta property="og:image" content="http://www.thesarangcare.com/static/img/더사랑메인.png" /> -->
-    <!-- <meta property="og:url" content="http://www.thesarangcare.com" /> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="가정방문요양콜센터 - 홈" />
+    <meta property="og:description" content="가정방문요양콜센터에서 제공하는 최상의 서비스와 편안한 케어를 경험하세요." />
+    <meta property="og:image" content="https://www.mshomecares.com/static/img/더사랑메인.png" />
+    <meta property="og:url" content="https://www.mshomecares.com" />
 
     <!-- Google Fonts: Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
 
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .navbar {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar-brand {
-            font-family: 'Noto Sans KR', sans-serif;
-            color: #4e4e4e;
-        }
-
-    
-        #map {
-            width: 100%;
-            height: 350px;
-        }
-        .blurry-background {
-            margin-top: 80px;
-            position: relative;
-            overflow: hidden;
-        }
-        .blurry-background img {
-            width: 100%;
-            height: auto;
-            opacity: 0.5;
-            object-fit: cover;
-            max-height: 800px;
-        }
-    
-
-    
-        .section-title {
-            background-color: #f2f2f2;
-            text-align: center;
-            padding: 8px 16px; /* 패딩 추가 */
-            margin: 20px 0; /* 위아래 여백 추가 */
-            border-radius: 8px; /* 배경색의 모서리를 둥글게 함 */
-        }
-        .service-container {
-            display: flex;
-            justify-content: center; /* 가로 방향 중앙 정렬 */
-            align-items: center; /* 세로 방향 중앙 정렬 */
-            margin-top: 50px; /* 위 여백 조정 */
-            margin-bottom: 100px; /* 아래 여백 조정 */
-        }
-        .map-container {
-            margin: 20px 0;
-            padding: 20px 0;
-        }
-
-        .centered-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: black;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .contact-badge {
-            position: fixed;
-            bottom: 10px;
-            left: 10px;
-            background-color: #000080; /* 진한 파랑색 배경 */
-            color: white;
-            padding: 10px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-            z-index: 1000;
-        }
-
-        .contact-badge img {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
-        }
-
-
-
-         /* Footer 스타일링 */
-        footer{
-            background-color: #343a40;
-            color: #fff;
-            padding-top: 20px;
-        }
-
-        footer .row div {
-            margin-bottom: 20px;
-        }
-
-        footer address, footer p {
-            margin: 0; /* 기본 마진 제거 */
-        }
-
-        /* 모바일 뷰 대응 */
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <!-- Logo -->
-        <div class = "container">
-        <a class="navbar-brand" href="index.html" style="font-weight: bold; color: green; font-size: 30px; font-family: 'Noto Sans KR', sans-serif; border: 2px solid green; padding: 10px; border-radius: 50%; display: inline-block;">
-            가정방문요양콜센터
-        </a>
-        <!-- Toggle button for mobile view -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">홈</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="homecare.html">방문요양 소개</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="homebathing.html">방문목욕 소개</a>
-                </li>
-                <!-- More nav items -->
-            </ul>
+        <div class="container">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="index.html" style="font-weight: bold; color: green; font-size: 30px; font-family: 'Noto Sans KR', sans-serif; border: 2px solid green; padding: 10px; border-radius: 50%; display: inline-block;">
+                가정방문요양콜센터
+            </a>
+            <!-- Toggler/Collapsible Button for mobile view -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo" aria-controls="navbarTogglerDemo" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="homecare.html">방문요양 소개</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="homebathing.html">방문목욕 소개</a>
+                    </li>
+                    <!-- More nav items -->
+                </ul>
+            </div>
         </div>
-    </div>
     </nav>
+    
     <section class="blurry-background">
         <img src="static/img/메인화면.jpg" alt = "Main BackGround">
         <div class="centered-text">
